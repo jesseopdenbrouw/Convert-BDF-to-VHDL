@@ -1,0 +1,37 @@
+<?xml version= "1.0"?>
+<!--
+* File name:	tmwc_BDF_Conversion_And_Simulation.tmf
+* Date:         5 mar 2014
+* Version:      1.1
+* Author:       Jesse op den Brouw
+*
+* Description:	Flow File for Compiling A Quartus Project
+                and Converting/Simulating BDF Files
+****************************************************************
+-->
+<tasks flowname = "BDF Conversion And Simulation" type = "user">
+	<predefined_tasks>
+		<id>fsm_viewer</id>
+		<id>netlist_viewers</id>
+		<id>open_chip_planner</id>
+		<id>rtl_viewer</id>
+		<id>start_analysis_elaboration</id>
+		<id>start_analysis_synthesis</id>
+		<id>start_assembler</id>
+		<id>start_design_assistant_post_map</id>
+		<id>start_fitter</id>
+		<id>start_full_compilation</id>
+		<id>start_partition_merge</id>
+		<id>start_timing_analyzer</id>
+		<id>tech_map_viewer_post_fit</id>
+		<id>tech_map_viewer_post_map</id>
+		<id>timequest_assignments</id>
+	</predefined_tasks>
+	<task>
+		<id>Start Conversion and Simulation</id>
+		<name>Start Conversion and Simulation</name>
+		<item_bitmap>tcl_command</item_bitmap>
+		<status_ok_if>project_is_open</status_ok_if>
+		<action type = "tcl_command">H:/QUARTUS/common/start_sim.tcl</action>
+	</task>
+</tasks>
