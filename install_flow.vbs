@@ -66,7 +66,7 @@ currentFolderName = Replace(currentFolderName, "\", "/")
 'Wscript.Echo "The current folder is " & currentFolderName & vbCrLf & "Press OK to continue"
 
 ' Replace default path name with new path name
-newContent=replace(oldContent,"H:/QUARTUS/INLDIG/common/" & startsimfilename, chr(34) & currentFolderName & "/" & startsimfilename & chr(34) ,1,-1,0)
+newContent=replace(oldContent,"H:/QUARTUS/common/" & startsimfilename, chr(34) & currentFolderName & "/" & startsimfilename & chr(34) ,1,-1,0)
 'MsgBox newContent
 
 ' Give the user the option to continue the installation or to abort
